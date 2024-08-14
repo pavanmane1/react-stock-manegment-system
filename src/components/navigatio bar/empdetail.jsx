@@ -38,61 +38,18 @@ const EmployeeScreen = () => {
             Name:
             <input type="text" name="name" value={employeeData.name} onChange={handleChange} />
           </label>
-          <label>
-            Department:
-            <input type="text" name="department" value={employeeData.department} onChange={handleChange} />
-          </label>
-          <label>
-            Joining Date:
-            <input type="date" name="joiningDate" value={employeeData.joiningDate} onChange={handleChange} />
-          </label>
-          <label>
-            Retired Date:
-            <input type="date" name="retiredDate" value={employeeData.retiredDate} onChange={handleChange} />
-          </label>
-          <label>
-            Basic Salary:
-            <input type="text" name="basicSalary" value={employeeData.basicSalary} onChange={handleChange} />
-          </label>
+        
           <label>
             Contact:
             <input type="text" name="contact" value={employeeData.contact} onChange={handleChange} />
           </label>
         </div>
-        <div className="form-right">
-          <label>
-            Status:
-            <input type="text" name="status" value={employeeData.status} onChange={handleChange} />
-          </label>
-          <label>
-            Type:
-            <input type="text" name="type" value={employeeData.type} onChange={handleChange} />
-          </label>
-          <label>
-            Address:
-            <input type="text" name="address" value={employeeData.address} onChange={handleChange} />
-          </label>
-          <label>
-            Photo:
-            <input type="file" name="photo" value={employeeData.photo} onChange={handleChange} />
-          </label>
-          <label>
-            Sex:
-            <input type="text" name="sex" value={employeeData.sex} onChange={handleChange} />
-          </label>
-          <label>
-            Working Period:
-            <input type="text" name="workingPeriod" value={employeeData.workingPeriod} onChange={handleChange} />
-          </label>
-          <label>
-            Adharcard:
-            <input type="text" name="adharcard" value={employeeData.adharcard} onChange={handleChange} />
-          </label>
-          <label>
-            Designation:
-            <input type="text" name="designation" value={employeeData.designation} onChange={handleChange} />
-          </label>
-        </div>
+        <button type='submit' className='submit_button'>
+                            Register
+                        </button>
+                        <button type='button' className='submit_button'>
+                            Cancel
+                        </button>
       </div>
     </div>
   );

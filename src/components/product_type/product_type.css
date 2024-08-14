@@ -1,0 +1,147 @@
+/* employee_details.css */
+
+/* Body styles */
+.Product-details-body {
+  /* background-image:  url('.\src\Imgs\Company Logo\VINAYAK MARKETING-1.png'),url('src\Imgs\pexels-pixabay-326333.jpg'); */
+  background-size: 51.9% 48% ,105% 120%;
+  display: flex;
+  background-position: center;
+  /* margin-left: 20px ,0%; */
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+}
+
+/* Wrapper styles */
+.Product-details-wrapper {
+  max-width: 800px; /* Increase the max-width to 800px */
+  width: 100%;
+   background: #81818161;
+  /* margin: 50px auto; Increase the margin to 50px */
+  padding: 30px;
+
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 2);
+}
+
+
+/* Title styles */
+.Product-details-title {
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+.Product-details-title h1 {
+  font-size: 30px;
+  color: #000000;
+  font-weight: bolder;
+
+}
+
+/* Form styles */
+.Product-details-form-container {
+  /* background-color:  #e5f5ff;
+  background-image: url('D:\Tushar\Projects\Plywood Shop\Playwoodshop-Manegment\src\Imgs\pexels-fwstudio-164005.jpg'); */
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.116);
+  display: flex;
+  flex-direction: column;
+}
+
+.Product-details-form .input-field {
+  margin-bottom: 15px;
+}
+
+.Product-details-form .input-field label {
+  display: block;
+  font-size: 18px;
+  color: #111111;
+  font-weight:bold;
+  margin-bottom: 5px;
+  /* background-image: url('D:\Tushar\Projects\Plywood Shop\Playwoodshop-Manegment\src\Imgs\pngwing.com (26).png');
+  background-size: 100%;
+  background-position: 50%; */
+}
+
+.Product-details-form .input-field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #141313;
+  font-weight: bold;
+}
+
+/* Arrange some fields in a row */
+.Product-details-form .input-field.inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Product-details-form .input-field.inline label {
+  width: 45%;
+}
+
+.Product-details-form .input-field.inline input {
+  width: 50%;
+}
+
+/* Buttons container styles */
+.Product-details-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Submit button styles */
+.Product-details-submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  /* font-weight: bold; */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.Product-details-submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Cancel button styles */
+.Product-details-cancel-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  /* font-weight: bold; */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.Product-details-cancel-button:hover {
+  background-color:#0056b3;
+}
+
+/*----------------------------*/
+
+/* product_type.css */
+
+/* Add this CSS for highlighting input field on error */
+.Product-details-form.input-field.error input {
+  border: 1px solid red;
+}
+
+/* Add any other styles as needed */
+
+
+/* -------------------------- */

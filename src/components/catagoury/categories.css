@@ -1,0 +1,146 @@
+/* productCategory.css */
+
+/* Body styles */
+.product-category-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    /* 'D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\Company Logo\VINAYAK MARKETING-1.png */
+    background-image: url(''), url('/src/Imgs/pngegg (1).png');
+    background-repeat: no-repeat;
+    background-size: 10%, 115% 100%;
+    max-width: 100%;
+    background-position: 5% 5%;
+
+}
+
+@media (max-width: 800px) {}
+
+
+
+/* Wrapper styles */
+.product-category-wrapper {
+    /* background-image: url('D:\Tushar\Projects\Plywood Shop\Playwoodshop-Manegment\src\Imgs\pngegg (1).png');
+    background-size: 150% 800% ; */
+    max-width: 800px;
+    width: 100%;
+    /* background: #fff; */
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 0.185);
+}
+
+/* Title styles */
+.product-category-title {
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.product-category-title h1 {
+    font-size: 30px;
+    color: #100f0f;
+
+}
+
+/* Form styles */
+.product-category-form-container {
+    background-color: #939495a7;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-category-form .input-field {
+    margin-bottom: 15px;
+}
+
+.product-category-form .input-field label {
+    display: block;
+    font-size: 14px;
+    color: #010101;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.product-category-form .input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.product-category-form .input-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Buttons container styles */
+.product-category-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Submit button styles */
+.product-category-submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.product-category-submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Cancel button styles */
+.product-category-cancel-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #e6dede;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.product-category-cancel-button:hover {
+    background-color: #0056b3
+}
+
+/* Additional styles for the add/remove product buttons */
+.add-product-button,
+.remove-product-button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.add-product-button:hover,
+.remove-product-button:hover {
+    background-color: #218838;
+}

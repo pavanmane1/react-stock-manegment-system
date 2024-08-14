@@ -1,0 +1,273 @@
+/* transaction.css */
+
+/* Body styles */
+.transaction-body {
+    /* background-image: url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\kindpng_6939286.png'); */
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f5f5f5;
+}
+
+/* Wrapper styles */
+.transaction-wrapper {
+
+    max-width: 800px;
+    width: 100%;
+    /* background: #fff; */
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 0.99);
+}
+
+/* Title styles */
+.transaction-title {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.transaction-title h1 {
+    font-size: 24px;
+    color: #050505;
+
+}
+
+/* Form styles */
+.transaction-form-container {
+
+    background-color: #e5f5ff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.825);
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-form .input-field {
+    margin-bottom: 15px;
+    color: #030303;
+}
+
+.transaction-form .input-field label {
+    display: block;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.transaction-form .input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #080808;
+}
+
+/* Buttons container styles */
+.transaction-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Submit button styles */
+.transaction-submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.transaction-submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Cancel button styles */
+.transaction-cancel-button {
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    color: #010101;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.transaction-cancel-button:hover {
+    background-color: #0056b3;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* transaction.css */
+
+/* Body styles */
+.transaction-body {
+    /* background-image: url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\Company Logo\VINAYAK MARKETING-1.png') */
+    /* ,url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\pexels-paula-128639.jpg') ; */
+
+
+    background-repeat: no-repeat;
+    background-size: 52.5% 94.2%, 100%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f5f5f5;
+}
+
+/* Wrapper styles */
+.transaction-wrapper {
+    /* background-image: url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\pngegg.png'); */
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: top right;
+    max-width: 800px;
+    width: 100%;
+    background: #ffffff67;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 0.185);
+}
+
+/* Title styles */
+.transaction-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.transaction-title h1 {
+    font-size: 28px;
+    color: #070707;
+}
+
+/* Form styles */
+.transaction-form-container {
+    background-color: #e5f5ff55;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-form .input-field {
+    margin-bottom: 15px;
+}
+
+.transaction-form .input-field label {
+    display: block;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.transaction-form .input-field input,
+.transaction-form .input-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Arrange some fields in a row */
+.transaction-form .input-field.inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.transaction-form .input-field.inline label {
+    width: 45%;
+}
+
+.transaction-form .input-field.inline input {
+    width: 50%;
+}
+
+/* Buttons container styles */
+.transaction-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Submit button styles */
+.transaction-submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.transaction-submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Cancel button styles */
+.transaction-cancel-button {
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.transaction-cancel-button:hover {
+    background-color: #0056b3;
+}
+
+/* ----------------------------------------- */
+
+/* transaction.css */
+
+/* Styling for transaction form */
+
+
+/* Styling for transaction type buttons */
+.transaction-form.input-field input[type="button"] {
+    background-color: #007bff;
+    border: 1px solid #0f0f10;
+    color: #ffffff;
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.transaction-form.input-field input[type="button"].selected {
+    background-color: #28a745;
+    /* Green for Inward */
+    color: #ffffff;
+}
+
+.transaction-form.input-field input[type="button"].selected.outward {
+    background-color: #dc3545;
+    /* Red for Outward */
+}
+
+
+
+/* ------------------------------------------- */

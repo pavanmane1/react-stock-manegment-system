@@ -1,0 +1,120 @@
+/* category.css */
+
+/* Body styles */
+.category-form-body {
+    /* background-image:  url('\src\Imgs\Company Logo\VINAYAK MARKETING-1.png'),url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\pexels-pixabay-326333.jpg'); */
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #FFFFFF; /* Set your desired background color */
+  }
+
+  /* Wrapper styles */
+  .category-form-wrapper {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(129, 129, 129, 0.380); /* Set your desired background color with opacity */
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Title styles */
+  .category-form-title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .category-form-title h1 {
+    font-size: 30px;
+    color: #000000;
+    font-weight: bolder;
+  }
+
+  /* Form styles */
+  .category-form-container {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.116);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category-form .input-field {
+    margin-bottom: 15px;
+  }
+
+  .category-form .input-field label {
+    display: block;
+    font-size: 18px;
+    color: #111111;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .category-form .input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #141313;
+    font-weight: bold;
+  }
+
+  /* Arrange some fields in a row */
+  .category-form .input-field.inline {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .category-form .input-field.inline label {
+    width: 45%;
+  }
+
+  .category-form .input-field.inline input {
+    width: 50%;
+  }
+
+  /* Buttons container styles */
+  .category-form-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  /* Submit button styles */
+  .category-form-submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .category-form-submit-button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Cancel button styles */
+  .category-form-cancel-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .category-form-cancel-button:hover {
+    background-color: #0056b3;
+  }

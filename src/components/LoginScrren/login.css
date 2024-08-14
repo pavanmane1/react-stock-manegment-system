@@ -11,14 +11,18 @@
 @import "rsuite/dist/rsuite.css";
 
 .wrapper {
-    max-width: 500px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.727);
+    border-radius: 5px;
+    padding: 20px;
+    width: 500px;
+    /* max-width: 500px;
     width: 100%;
-    background: #fff;
+
     margin: 100px auto;
     padding: 30px;
     border-radius: 10px;
     box-sizing: border-box;
-    box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 0.185);
+    box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 0.185); */
 }
 
 
@@ -37,7 +41,7 @@
 
 .form_container {
     /* background-color: rgb(187, 233, 228); */
-    background-color: #e5f5ff;
+    background-color: #e5f5ff65;
     margin: 10px;
     padding: 20px;
     border-radius: 5px;
@@ -49,7 +53,7 @@
 
 .title h1 {
     text-shadow: 4px 4px 5px #00000052;
-
+    color: black;
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -64,7 +68,7 @@
     background-color: #c50000;
     content: '';
     display: block;
-    height: 3px;
+    height: 10px;
     width: 75px;
     margin-bottom: 10px;
 }
@@ -73,21 +77,29 @@
 /* login.css */
 
 .body {
+    /* background-image: url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\Company Logo\VINAYAK MARKETING-1.png'),url("D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\Plywood1.png"); */
+    background-repeat: no-repeat;
+    background-size: 10% ,100% 100% ;
+    background-position: 3% 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
 }
 
 .wrapper {
-    background-color: #fff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    /* background-image: url("D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\35202572_padlock.jpg"); */
+    background-repeat: no-repeat;
+    background-size: 250px ;
+    background-position: top center;
+
+    /* background-color: #fff; */
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
     border-radius: 5px;
     padding: 20px;
     width: 400px;
 }
-
 
 .form_container {
     display: flex;
@@ -100,8 +112,11 @@
 }
 
 .input_field label {
+
     font-size: 14px;
     font-weight: bold;
+    color: black;
+
 }
 
 .input_field input {
@@ -109,6 +124,9 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    color: black;
+
+    font-weight: bold;
 }
 
 

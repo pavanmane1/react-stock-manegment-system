@@ -1,0 +1,73 @@
+/* registration.css */
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.wrapper {
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    width: 500px;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input_field {
+    margin-bottom: 15px;
+}
+
+.input_field label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input_field input,
+.input_field select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.submit_button,
+.cancel_button {
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit_button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.submit_button:hover {
+    background-color: #0056b3;
+}
+
+.cancel_button {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+}
+
+.cancel_button:hover {
+    background-color: #999;
+}

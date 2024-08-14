@@ -3,25 +3,27 @@
     color: #fff;
     display: flex;
     align-items: center;
-    height: 60px;
+    height: 80px;
     padding: 0 20px;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
+    margin-left: 20px;
 }
 
 .menu {
     list-style: none;
     display: flex;
-    margin: 0;
+    font-size: 15px;
+    margin: 0 10px;
     padding: 0;
     margin-left: auto;
 }
 
 .menu-item {
-    padding: 0 10px;
+    padding: 0 20px;
     cursor: pointer;
 }
 
@@ -30,7 +32,8 @@
 }
 
 .menu-master {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right : 20px;
     padding: 10px 20px;
     border: 1px solid #fff;
     border-radius: 20px;

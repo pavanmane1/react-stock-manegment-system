@@ -1,84 +1,100 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
-import swal from 'sweetalert';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
-const LoginScreen = () => {
-    const navigate = useNavigate();
-    const [formSubmission, setFormSubmission] = useState({
-        Username: '',
-        Password: '',
-    });
+const LoginScreen = ({ onLogin }) => {
+  const navigate = useNavigate();
+  const [formSubmission, setFormSubmission] = useState({
+    username: '',
+    password: '',
+  });
 
-    const handleInput = (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        setFormSubmission({ ...formSubmission, [name]: value });
-    };
+  const handleInput = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setFormSubmission({ ...formSubmission, [name]: value });
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Your logic for handling form submission goes here
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log('Handling form submission...');
 
-        // For example, show a success message and navigate to the next screen
-        swal('Success', 'Login successful!', 'success').then(() => {
-            // Navigate to the next screen using the correct route path
-            navigate('/registration'); // Replace '/registration' with the actual path you want to navigate to
-        });
-    };
+    try {
+      const response = await axios.post('http://192.168.1.45:8081/login', formSubmission);
+      console.log(response.data);
 
-    return (
-        <div>
-            <motion.div
-                transition={{ duration: 0.3, ease: 'easeOut' }}
-                animate={{ z: 100, scale: 1 }}
-                initial={{ scale: 0 }}
-                className='body'
+      if (response.data.loginstatus) {
+        // Store the token in localStorage or a cookie
+        localStorage.setItem('token', response.data.token);
+
+        // Call the onLogin callback
+        onLogin();
+
+        // Navigate to the dashboard
+        navigate('/dashboard');
+      } else {
+
+        alert(response.data.message);
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('An error occurred during login.');
+    }
+  };
+
+  return (
+    <div>
+      <motion.div
+        transition={{ duration: 0.2, ease: 'easeOut' }}
+        animate={{ z: 100, scale: 1 }}
+        initial={{ scale: 0 }}
+        className='body'
+      >
+        <div className='wrapper'>
+          <div className='title'>
+            <h1>Log in</h1>
+          </div>
+          <form className='form_container' onSubmit={handleSubmit}>
+            <div className='form'>
+              <div className='input_field'>
+                <label>Username</label>
+                <input
+                  type='text'
+                  name='username'
+                  value={formSubmission.username}
+                  onChange={handleInput}
+                />
+              </div>
+              <div className='input_field'>
+                <label>Password</label>
+                <input
+                  type='password'
+                  name='password'
+                  value={formSubmission.password}
+                  onChange={handleInput}
+                />
+              </div>
+            </div>
+
+            <button type='submit' className='submit_button'>
+              Login
+            </button>
+            <button
+              className='submit_button'
+              onClick={() => {
+                // Handle registration button click
+                navigate('/registration');
+              }}
             >
-                <div className='wrapper'>
-                    <div className='title'>
-                        <h1>Log in</h1>
-                    </div>
-                    <form className='form_container' onSubmit={handleSubmit}>
-                        <div className='form'>
-                            <div className='input_field'>
-                                <label>Username</label>
-                                <input
-                                    type='text'
-                                    name='Username'
-                                    value={formSubmission.Username}
-                                    onChange={handleInput}
-                                />
-                            </div>
-                            <div className='input_field'>
-                                <label>Password</label>
-                                <input
-                                    type='password'
-                                    name='Password'
-                                    value={formSubmission.Password}
-                                    onChange={handleInput}
-                                />
-                            </div>
-                        </div>
-
-                        <button type='submit' className='submit_button'>
-                            Login
-                        </button>
-                        <button
-                            className='submit_button'
-                            onClick={() => {
-                                // Handle registration button click
-                                navigate('/registration'); // Replace '/registration' with the actual path for the registration screen
-                            }}
-                        >
-                            Register
-                        </button>
-                    </form>
-                </div>
-            </motion.div>
+              Register
+            </button>
+          </form>
         </div>
-    );
+      </motion.div>
+    </div>
+  );
 };
 
 export default LoginScreen;

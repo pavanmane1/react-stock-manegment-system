@@ -1,44 +1,61 @@
 .dashboard {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     /* Center the content horizontally */
+
+    /* background-image: url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\Company Logo\VINAYAK MARKETING-1.png'); */
+                      /* ,url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\Plywood1.png'); */
+                        /* url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\pexels-paula-128639.jpg'); */
+
+    background-size: 14%;
+    background-position: top center,top;
+    background-repeat: no-repeat;
+    clip: rect(20px,40px);
+
+
 }
 
 .cards-container {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 350px;
     /* Add gap between cards */
     margin-bottom: 20px;
+    margin-top: 8px;
 }
-
 .card {
-    /* height: 100px; */
     width: 200px;
-    background-color: #f0f0f0;
+    background: linear-gradient(to bottom right, #8B4513, #D2B48C);
     padding: 16px;
     margin: 10px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #1717176c;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #fff; /* set text color to white for better contrast */
 }
+
 
 .card h2 {
     font-size: 18px;
     margin-bottom: 8px;
+    color: rgb(252, 249, 249);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+
 .card p {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
-    color: #007bff;
+    color: #ffffff;
 }
 
 .filter-container {
+
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -50,6 +67,8 @@
 
 .filter-container label {
     margin-right: 10px;
+    color: black;
+
 }
 
 .filter-container select {
@@ -61,20 +80,31 @@
 .employee-table {
     width: 100%;
     border-collapse: collapse;
-}
+    background-color: #ffffff;
 
+
+}
+.employee-table th{
+    border-top: 1px double #090909a2;
+    color: black;
+
+}
 .employee-table th,
 .employee-table td {
     padding: 8px 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    text-align: center;
+    border-bottom: 2px solid #090909a2;
+    border-left: 2px solid #090909a2;
+    font-weight: bold;
 }
 
 .employee-table th {
     background-color: #f2f2f2;
+
 }
 
 .table-container {
+
     display: flex;
     justify-content: center;
     margin: 20px;
