@@ -1,0 +1,47 @@
+.employee-screen {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 800px; /* Increase the max-width to 800px */
+    width: 100%;
+    background: #fff;
+    margin: 50px auto; /* Increase the margin to 50px */
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 0.185);
+  }
+
+  .form-container {
+    display: flex;
+  }
+
+  .form-left {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .form-right {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .form-left label,
+  .form-right label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-left input,
+  .form-right input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }

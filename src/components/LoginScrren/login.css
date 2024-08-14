@@ -1,0 +1,130 @@
+/*body {
+
+    background-size: 400% 400%;
+    background-repeat: no-repeat;
+    -moz-backface-visibility: hidden;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
+    height: 100vh;
+
+}*/
+@import "rsuite/dist/rsuite.css";
+
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 0.185);
+}
+
+
+
+.wrapper .form {
+    width: 100%;
+
+
+}
+
+.inpu_field {
+    margin-bottom: 15px;
+}
+
+
+
+.form_container {
+    /* background-color: rgb(187, 233, 228); */
+    background-color: #e5f5ff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+
+}
+
+
+
+.title h1 {
+    text-shadow: 4px 4px 5px #00000052;
+
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 160px;
+    text-align: center;
+    white-space: nowrap;
+    padding-bottom: 13px;
+}
+
+.title>h1:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 10px;
+}
+
+
+/* login.css */
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.wrapper {
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+}
+
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input_field {
+    margin-bottom: 15px;
+}
+
+.input_field label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input_field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+
+.submit_button {
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit_button:hover {
+    background-color: #0056b3;
+}
+
+
