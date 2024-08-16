@@ -22,7 +22,7 @@ const LoginScreen = ({ onLogin }) => {
     console.log('Handling form submission...');
 
     try {
-      const response = await axios.post('http://192.168.1.45:8081/login', formSubmission);
+      const response = await axios.post('https://nodejs-practice-zc7n.onrender.com/login', formSubmission);
       console.log(response.data);
 
       if (response.data.loginstatus) {
