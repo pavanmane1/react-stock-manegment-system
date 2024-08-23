@@ -15,20 +15,21 @@ function PrivateRoute({ children, isAuthenticated }) {
 }
 
 function App() {
-  // Load authentication status from local storage
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    () => localStorage.getItem('isAuthenticated') === 'true'
-  );
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const handleLogin = () => {
+  useEffect(() => {
+    // Check localStorage for token to determine if the user is authenticated
+    const token = localStorage.getItem('token');
+    setIsAuthenticated(!!token);
+  }, []);
+
+  const handleLogin = (token) => {
     setIsAuthenticated(true);
-    localStorage.setItem('isAuthenticated', 'true'); // Persist login state
+    localStorage.setItem('token', token); // Persist the token
   };
 
   const handleLogout = () => {
-    // Clear the authentication token and login status from local storage
-    localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('token');
+    localStorage.removeItem('token'); // Clear the token
     setIsAuthenticated(false);
   };
 

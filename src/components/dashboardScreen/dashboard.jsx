@@ -13,62 +13,62 @@ const App = () => {
 
   useEffect(() => {
     // Fetch products from the API when the component mounts
-    fetchProducts();
-    fetchDailyTransactions();
-    Importexport();
+    // fetchProducts();
+    // fetchDailyTransactions();
+    // Importexport();
 
   }, []); // Empty dependency array ensures this effect runs only once on mount
 
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get('http://192.228.1.20:8081/api/users/products');
-      setProducts(response.data);
-    } catch (error) { 
-      console.error('Error fetching products:', error);
-      setTransactions([]); // Set transactions to an empty array in case of an error
-    }
-  };
+  // const fetchProducts = async () => {
+  //   try {
+  //     const response = await axios.get('http://192.228.1.20:8081/api/users/products');
+  //     setProducts(response.data);
+  //   } catch (error) {
+  //     console.error('Error fetching products:', error);
+  //     setTransactions([]); // Set transactions to an empty array in case of an error
+  //   }
+  // };
 
-  const Importexport = async () => {
-    try {
-      const response = await axios.get('http://192.228.1.20:8081/api/users/totalimportexport');
-      setImportexport(response.data);
-    } catch (error) { 
-      console.error('Error fetching products:', error);
-      setImportexport([]); 
-    }
-  };
+  // const Importexport = async () => {
+  //   try {
+  //     const response = await axios.get('http://192.228.1.20:8081/api/users/totalimportexport');
+  //     setImportexport(response.data);
+  //   } catch (error) {
+  //     console.error('Error fetching products:', error);
+  //     setImportexport([]);
+  //   }
+  // };
 
-  const importexportbydate = async () => {
-    try {
-      const response = await axios.get(`http://192.228.1.20:8081/api/users//totalimportexportbydate?startDate=${startDate}&endDate=${endDate}`);
-      setImportexport(response.data);
-    } catch (error) { 
-      console.error('Error fetching products:', error);
-      setImportexport([]); 
-    }
-  };
+  // const importexportbydate = async () => {
+  //   try {
+  //     const response = await axios.get(`http://192.228.1.20:8081/api/users//totalimportexportbydate?startDate=${startDate}&endDate=${endDate}`);
+  //     setImportexport(response.data);
+  //   } catch (error) {
+  //     console.error('Error fetching products:', error);
+  //     setImportexport([]);
+  //   }
+  // };
 
-  const fetchDailyTransactions = async () => {
-    try {
-      const response = await axios.get('http://192.228.1.20:8081/api/users/dayilytransactions');
-      setTransactions(response.data);
-    } catch (error) {   
-      console.error('Error fetching daily transactions:', error);
-      setTransactions([]); // Set transactions to an empty array in case of an error
-    }
-  };
+  // const fetchDailyTransactions = async () => {
+  //   try {
+  //     const response = await axios.get('http://192.228.1.20:8081/api/users/dayilytransactions');
+  //     setTransactions(response.data);
+  //   } catch (error) {
+  //     console.error('Error fetching daily transactions:', error);
+  //     setTransactions([]); // Set transactions to an empty array in case of an error
+  //   }
+  // };
 
-  const fetchTransactions = async (employeeId, productId) => {
-    try {
-      const url = `http://192.228.1.20:8081/api/users/transactions?employeeId=${employeeId}&productId=${productId}`;
-      const response = await axios.get(url);
-      setTransactions(response.data);
-    } catch (error) {  
-      console.error('Error fetching transactions:', error);
-      setTransactions([]); // Set transactions to an empty array in case of an error
-    }
-  };
+  // const fetchTransactions = async (employeeId, productId) => {
+  //   try {
+  //     const url = `http://192.228.1.20:8081/api/users/transactions?employeeId=${employeeId}&productId=${productId}`;
+  //     const response = await axios.get(url);
+  //     setTransactions(response.data);
+  //   } catch (error) {
+  //     console.error('Error fetching transactions:', error);
+  //     setTransactions([]); // Set transactions to an empty array in case of an error
+  //   }
+  // };
 
   const handleSelectedEmployee = (event) => {
     const selectedEmployeeValue = event.target.value;
@@ -78,7 +78,7 @@ const App = () => {
   const handleSelectedProduct = (event) => {
     const selectedProductValue = event.target.value;
     setSelectedProduct(selectedProductValue);
-    fetchTransactions(selectedEmployee, selectedProductValue);
+    // fetchTransactions(selectedEmployee, selectedProductValue);
   };
 
   const handleStartDateChange = (event) => {
@@ -89,17 +89,17 @@ const App = () => {
     setEndDate(event.target.value);
   };
 
-  const handleDownload = async () => {
-    try {
-      importexportbydate ();
-      const url = `http://192.228.1.20:8081/api/users/fromtoenddatetransaction?startDate=${startDate}&endDate=${endDate}`;
-      const response = await axios.get(url);
-      setTransactions(response.data);
-    } catch (error) {
-      console.error('Error fetching transactions:', error);
-      setTransactions([]); // Set transactions to an empty array in case of an error
-    }
-  };
+  // const handleDownload = async () => {
+  //   try {
+  //     importexportbydate ();
+  //     const url = `http://192.228.1.20:8081/api/users/fromtoenddatetransaction?startDate=${startDate}&endDate=${endDate}`;
+  //     const response = await axios.get(url);
+  //     setTransactions(response.data);
+  //   } catch (error) {
+  //     console.error('Error fetching transactions:', error);
+  //     setTransactions([]); // Set transactions to an empty array in case of an error
+  //   }
+  // };
 
   return (
     <div className="dashboard">
@@ -107,18 +107,18 @@ const App = () => {
         <div className="card">
           <h2>Import</h2>
           {importexport.map((Import) => (
-              <p>
-                {Import.total_import}
-              </p>
-            ))}
+            <p>
+              {Import.total_import}
+            </p>
+          ))}
         </div>
         <div className="card">
           <h2>Export</h2>
           {importexport.map((Export) => (
-              <p>
-                {Export.total_export}
-              </p>
-            ))}
+            <p>
+              {Export.total_export}
+            </p>
+          ))}
         </div>
       </div>
 
@@ -128,8 +128,8 @@ const App = () => {
           <option value="">Select</option>
           <option value="10797b13-f63b-4712-bc75-f773e41c33e6">Ram</option>
           <option value="2c4b6d0e-16c3-4e10-a7b7-b8f802812d8d">Harman</option>
-           <option value="cf8dcbad-4739-453b-86e8-87876064e94f">Sid P</option>
-            <option value="f1992c73-6a69-4573-96f8-b40fe064eca2">aashvain M </option>
+          <option value="cf8dcbad-4739-453b-86e8-87876064e94f">Sid P</option>
+          <option value="f1992c73-6a69-4573-96f8-b40fe064eca2">aashvain M </option>
           {/* Add more options as needed */}
         </select>
 
@@ -155,7 +155,7 @@ const App = () => {
           <input type="date" value={endDate} onChange={handleEndDateChange} />
         </label>
 
-        <button onClick={handleDownload}>Show Transaction</button>
+        {/* <button onClick={handleDownload}>Show Transaction</button> */}
       </div>
 
       <table className="employee-table">

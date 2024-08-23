@@ -22,13 +22,14 @@ const LoginScreen = ({ onLogin }) => {
     console.log('Handling form submission...');
 
     try {
-      const response = await axios.post('https://nodejs-practice-zc7n.onrender.com/login', formSubmission);
+      const response = await axios.post('http://192.168.1.45:8081/api/auth/userlogin', formSubmission);
       console.log(response.data);
 
       if (response.data.loginstatus) {
         // Store the token in localStorage or a cookie
         localStorage.setItem('token', response.data.token);
-
+        // localStorage.setItem('username', formSubmission.username);
+        // localStorage.setItem('password', formSubmission.password);
         // Call the onLogin callback
         onLogin();
 

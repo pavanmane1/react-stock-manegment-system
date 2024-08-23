@@ -12,9 +12,12 @@ function Navbar({ onLogout }) {
 
   const showSidebar = () => setSidebar(!sidebar);
 
+  
+
   const handleLogout = () => {
     // Clear the authentication token and update state
     localStorage.removeItem('token');
+
     onLogout(); // Update the authentication state in the App component
     navigate('/'); // Redirect to login page
   };

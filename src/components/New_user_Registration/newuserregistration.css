@@ -1,4 +1,4 @@
-/* registration.css */
+/* newuserregistration.css */
 
 .body {
     display: flex;
@@ -13,7 +13,8 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 20px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .form_container {
@@ -21,10 +22,14 @@
     flex-direction: column;
 }
 
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
 }
 
 .input_field {
@@ -42,6 +47,30 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
+}
+
+.password_field {
+    position: relative;
+}
+
+.password_container {
+    display: flex;
+    align-items: center;
+}
+
+.password_container input {
+    flex: 1;
+    padding-right: 40px;
+    /* Adjust to make space for the button */
+}
+
+.show_password_button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
 }
 
 .submit_button,
