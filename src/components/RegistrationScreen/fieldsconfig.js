@@ -8,6 +8,7 @@ const fieldConfigs = [
     { name: 'namelast', type: 'text', placeholder: 'Last Name' },
     { name: 'namefirst', type: 'text', placeholder: 'First Name' },
     { name: 'namemiddle', type: 'text', placeholder: 'Middle Name' },
+    { name: 'name', type: 'text', placeholder: 'Full Name' },
     { name: 'education', type: 'text', placeholder: 'Education' },
     { name: 'address1', type: 'text', placeholder: 'Address 1' },
     { name: 'address2', type: 'text', placeholder: 'Address 2' },
@@ -28,7 +29,6 @@ const fieldConfigs = [
     { name: 'ppf_number', type: 'text', placeholder: 'PPF Number' },
     { name: 'pan_number', type: 'text', placeholder: 'PAN Number' },
     { name: 'email_id', type: 'email', placeholder: 'Email ID' },
-    { name: 'pl', type: 'number', placeholder: 'PL' },
 ];
 
 export default fieldConfigs;

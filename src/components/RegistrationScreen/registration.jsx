@@ -23,7 +23,7 @@ const Registration = () => {
         permanentaddress2: '',
         permanentcity: '',
         permanentstate: '',
-        dateofleaving: '',
+        dateofleaving: null,
         dateofjoining: '',
         initials: '',
         employeetype_code: '',
@@ -32,26 +32,31 @@ const Registration = () => {
         ppf_number: '',
         pan_number: '',
         email_id: '',
-        pl: 0,
-        cl: 0,
-        ml: 0,
-        isclosed: 0,
-        isdeleted: 0,
-        pettycashaccount_id: '',
     });
 
     const [generatedEmpCode, setGeneratedEmpCode] = useState('');
     const [errors, setErrors] = useState({});
+    const [designations, setDesignations] = useState([]);
 
     useEffect(() => {
-        generateEmployeeCode();
+        // generateEmployeeCode();
+        fetchDesignations();
     }, []);
 
-    const generateEmployeeCode = () => {
-        const randomSixDigitNumber = Math.floor(100000 + Math.random() * 900000);
-        const empCode = `E${randomSixDigitNumber}`;
-        setGeneratedEmpCode(empCode);
-        setFormData(prevFormData => ({ ...prevFormData, employee_id: empCode }));
+    // const generateEmployeeCode = () => {
+    //     const randomSixDigitNumber = Math.floor(100000 + Math.random() * 900000);
+    //     const empCode = `E${randomSixDigitNumber}`;
+    //     setGeneratedEmpCode(empCode);
+    //     setFormData(prevFormData => ({ ...prevFormData, employee_id: empCode }));
+    // };
+
+    const fetchDesignations = async () => {
+        try {
+            const response = await axios.get('http://192.168.1.45:8081/api/users/designation');
+            setDesignations(response.data);
+        } catch (error) {
+            console.error('Error fetching designations:', error);
+        }
     };
 
     const handleInputChange = (e) => {
@@ -78,11 +83,13 @@ const Registration = () => {
         });
 
         setErrors(newErrors);
+        setFormData({});
 
         if (Object.keys(newErrors).length > 0) return;
 
         try {
-            const response = await axios.post('http://192.168.56.1:8081/api/users/save', formData);
+            console.log(formData)
+            const response = await axios.post('http://192.168.1.45:8081/api/users/registeremployee', formData);
             console.log(response.status);
         } catch (error) {
             console.error('Error making POST request:', error);
@@ -94,20 +101,36 @@ const Registration = () => {
             <div className="registration_wrapper">
                 <div className="registraion_form_container">
                     <div className="title">
-                        <h1>Employe Registration</h1>
+                        <h1>Employee Registration</h1>
                     </div>
                     <form className="emp_reg_form" onSubmit={handleSubmit}>
                         {fieldConfigs.map(({ name, type, placeholder }) => (
                             <div className="emp_reg_input_field" key={name}>
                                 <label htmlFor={name}>{placeholder}</label>
-                                <input
-                                    id={name}
-                                    type={type}
-                                    name={name}
-                                    placeholder={placeholder}
-                                    value={formData[name] || ''}
-                                    onChange={handleInputChange}
-                                />
+                                {name === 'designation' ? (
+                                    <select
+                                        id={name}
+                                        name={name}
+                                        value={formData[name]}
+                                        onChange={handleInputChange}
+                                    >
+                                        <option value="">Select Designation</option>
+                                        {designations.map(designation => (
+                                            <option key={designation.designation_id} value={designation.designationName}>
+                                                {designation.designationName}
+                                            </option>
+                                        ))}
+                                    </select>
+                                ) : (
+                                    <input
+                                        id={name}
+                                        type={type}
+                                        name={name}
+                                        placeholder={placeholder}
+                                        value={formData[name] || ''}
+                                        onChange={handleInputChange}
+                                    />
+                                )}
                                 {errors[name] && <p className="error_message">{errors[name]}</p>}
                             </div>
                         ))}

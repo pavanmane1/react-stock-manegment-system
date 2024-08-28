@@ -1,5 +1,3 @@
-/* registration.css */
-
 .userregistration_body {
     height: 100vh;
     background-color: #f2f2f2;
@@ -19,24 +17,24 @@
 .registraion_form_container {
     display: flex;
     flex-direction: column;
+    background-color: #e5f5ff65;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.116);
 }
 
 .emp_reg_form {
     display: flex;
     flex-wrap: wrap;
-    /* Allow fields to wrap if needed */
     gap: 15px;
-    /* Space between fields */
 }
 
 .emp_reg_input_field {
     flex: 1 1 calc(25% - 30px);
-    /* Adjust to fit fields in a 2-column layout */
     margin-bottom: 15px;
     min-width: 200px;
-    /* Minimum width to keep fields from getting too small */
 }
-
 
 .emp_reg_input_field label {
     font-size: 14px;
@@ -45,11 +43,32 @@
     margin-bottom: 5px;
 }
 
-.emp_reg_input_field input {
+.emp_reg_input_field input,
+.emp_reg_input_field select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+}
+
+.emp_reg_input_field select {
+    appearance: none;
+    /* Removes default styling on select elements */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNjY2NjY2IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMTZsLTgtOGgxNnoiLz48cGF0aCBkPSJNMTIgMTZoMTR2LTRoLTE0eiIvPjwvc3ZnPg==');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.emp_reg_input_field select:hover,
+.emp_reg_input_field select:focus {
+    border-color: #007bff;
 }
 
 .submit_button {

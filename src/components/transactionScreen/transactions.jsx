@@ -174,7 +174,7 @@ import axios from 'axios';
 const Transaction = () => {
     const today = new Date().toLocaleDateString('en-CA'); // Get today's date in the format YYYY-MM-DD
     const [products, setProducts] = useState([]);
-
+    const [employeeDetails, setEmployeeDetails] = useState([])
     const [formSubmission, setFormSubmission] = useState({
         date: today,
         employee: "",
@@ -201,17 +201,16 @@ const Transaction = () => {
     };
 
     useEffect(() => {
-        // Fetch product types from the API
-        axios.get('http://192.228.1.20:8081/api/users/products')
-            .then(response => {
-                setProducts(response.data);
-            })
-            .catch(error => {
-                console.error('Error fetching product types:', error);
-            });
-
+        fetchEmployee();
     }, []); // Run this effect only once on component mount
-
+    const fetchEmployee = async () => {
+        try {
+            const response = await axios.get('http://192.168.1.45:8081/api/users/employee');
+            setEmployeeDetails(response.data);
+        } catch (error) {
+            console.error('Error fetching designations:', error);
+        }
+    };
     const handleRadioChange = (e) => {
         const value = e.target.value;
         setFormSubmission({ ...formSubmission, transactionType: value });
@@ -225,7 +224,7 @@ const Transaction = () => {
             .then(res => {
                 swal("Successful", "Your data is saved!");
                 console.log(res);
-            })  
+            })
             .catch(error => {
                 swal("Error", "Your data is not saved!");
                 console.error(error);
@@ -263,15 +262,13 @@ const Transaction = () => {
                                     value={formSubmission.employee}
                                     onChange={handleInput}
                                 >
-                                    {/* Add options dynamically based on your data */}
                                     <option value="">Select Employee</option>
-                                    <option value="10797b13-f63b-4712-bc75-f773e41c33e6">Ram Raj</option>
-                                    <option value="2c4b6d0e-16c3-4e10-a7b7-b8f802812d8d">Harman</option>
-                                    <option value="cf8dcbad-4739-453b-86e8-87876064e94f">Sid P</option>
-                                    <option value="f1992c73-6a69-4573-96f8-b40fe064eca2">aashvain M </option>
-                                
-                                    {/* <option value="3526fc23-4c68-47aa-bf2d-4edbc37fd5c1">Employee 2</option> */}
-                                    {/* Add more options as needed */}
+                                    {employeeDetails.map((emp => (
+                                        <option key={emp.id} value={emp.id}>
+                                            {emp.name}
+                                        </option>
+                                    )))
+                                    }
                                 </select>
                             </div>
 
@@ -302,23 +299,23 @@ const Transaction = () => {
                                 />
                             </div>
 
-                                        <div className="transaction-form input-field">
-                <label>Transaction Type</label>
-                <div>
-                    <input
-                        type="button"
-                        value="Inward"
-                        className={formSubmission.transactionType === 'import' ? 'selected' : ''}
-                        onClick={() => setFormSubmission({ ...formSubmission, transactionType: 'import' })}
-                    />
-                    <input
-                        type="button"
-                        value="Outward"
-                        className={formSubmission.transactionType === 'export' ? 'selected' : ''}
-                        onClick={() => setFormSubmission({ ...formSubmission, transactionType: 'export' })}
-                    />
-                </div>
-            </div>
+                            <div className="transaction-form input-field">
+                                <label>Transaction Type</label>
+                                <div>
+                                    <input
+                                        type="button"
+                                        value="Inward"
+                                        className={formSubmission.transactionType === 'import' ? 'selected' : ''}
+                                        onClick={() => setFormSubmission({ ...formSubmission, transactionType: 'import' })}
+                                    />
+                                    <input
+                                        type="button"
+                                        value="Outward"
+                                        className={formSubmission.transactionType === 'export' ? 'selected' : ''}
+                                        onClick={() => setFormSubmission({ ...formSubmission, transactionType: 'export' })}
+                                    />
+                                </div>
+                            </div>
 
                         </div>
 
