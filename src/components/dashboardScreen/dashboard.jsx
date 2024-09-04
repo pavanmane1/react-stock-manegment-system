@@ -10,6 +10,7 @@ const App = () => {
   const [importexport, setImportexport] = useState([]);
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
+  const [employeeDetails, setEmployeeDetails] = useState([])
 
   useEffect(() => {
     // Fetch products from the API when the component mounts
@@ -89,6 +90,17 @@ const App = () => {
     setEndDate(event.target.value);
   };
 
+  useEffect(() => {
+    fetchEmployee();
+  }, []); // Run this effect only once on component mount
+  const fetchEmployee = async () => {
+    try {
+      const response = await axios.get('http://192.168.1.45:8081/api/users/employee');
+      setEmployeeDetails(response.data);
+    } catch (error) {
+      console.error('Error fetching designations:', error);
+    }
+  };
   // const handleDownload = async () => {
   //   try {
   //     importexportbydate ();
@@ -125,12 +137,13 @@ const App = () => {
       <div className="filter-container">
         <label>Employee :</label>
         <select value={selectedEmployee} onChange={handleSelectedEmployee}>
-          <option value="">Select</option>
-          <option value="10797b13-f63b-4712-bc75-f773e41c33e6">Ram</option>
-          <option value="2c4b6d0e-16c3-4e10-a7b7-b8f802812d8d">Harman</option>
-          <option value="cf8dcbad-4739-453b-86e8-87876064e94f">Sid P</option>
-          <option value="f1992c73-6a69-4573-96f8-b40fe064eca2">aashvain M </option>
-          {/* Add more options as needed */}
+          <option value="">Select Employee</option>
+          {employeeDetails.map((emp => (
+            <option key={emp.id} value={emp.id}>
+              {emp.name}
+            </option>
+          )))
+          }
         </select>
 
         <label>

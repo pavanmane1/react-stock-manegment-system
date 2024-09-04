@@ -2,119 +2,292 @@
 
 /* Body styles */
 .category-form-body {
-    /* background-image:  url('\src\Imgs\Company Logo\VINAYAK MARKETING-1.png'),url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\pexels-pixabay-326333.jpg'); */
-    background-size: cover;
-    display: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #FFFFFF; /* Set your desired background color */
-  }
+  /* background-image:  url('\src\Imgs\Company Logo\VINAYAK MARKETING-1.png'),url('D:\Tushar\Projects\Vinayak Marketing Co\Vinayak Marketing Co\src\Imgs\pexels-pixabay-326333.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  /* Set your desired background color */
+}
 
-  /* Wrapper styles */
-  .category-form-wrapper {
-    max-width: 800px;
-    width: 100%;
-    background: rgba(129, 129, 129, 0.380); /* Set your desired background color with opacity */
-    padding: 30px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 0.2);
-  }
+/* Wrapper styles */
+.category-form-wrapper {
+  /* Set your desired background color with opacity */
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 4px 2px 5px 3px rgba(0, 0, 0, 0.2);
+}
 
-  /* Title styles */
-  .category-form-title {
-    text-align: center;
-    margin-bottom: 10px;
-  }
+/* Title styles */
+.category-form-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
 
-  .category-form-title h1 {
-    font-size: 30px;
-    color: #000000;
-    font-weight: bolder;
-  }
+.category-form-title h1 {
+  font-size: 30px;
+  color: #000000;
+  font-weight: bolder;
+}
 
-  /* Form styles */
-  .category-form-container {
-    margin: 10px;
-    padding: 20px;
-    border-radius: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.116);
-    display: flex;
-    flex-direction: column;
-  }
+/* Form styles */
+.category-form-container {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.116);
+  display: flex;
+  flex-direction: column;
+}
 
-  .category-form .input-field {
-    margin-bottom: 15px;
-  }
+.category-form .input-field {
+  margin-bottom: 15px;
+}
 
-  .category-form .input-field label {
-    display: block;
-    font-size: 18px;
-    color: #111111;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
+.category-form .input-field label {
+  display: block;
+  font-size: 18px;
+  color: #111111;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
-  .category-form .input-field input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #141313;
-    font-weight: bold;
-  }
+.category-form .input-field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #141313;
+  font-weight: bold;
+}
 
-  /* Arrange some fields in a row */
-  .category-form .input-field.inline {
-    display: flex;
-    justify-content: space-between;
-  }
+/* Arrange some fields in a row */
+.category-form .input-field.inline {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .category-form .input-field.inline label {
-    width: 45%;
-  }
+.category-form .input-field.inline label {
+  width: 45%;
+}
 
-  .category-form .input-field.inline input {
-    width: 50%;
-  }
+.category-form .input-field.inline input {
+  width: 50%;
+}
 
-  /* Buttons container styles */
-  .category-form-buttons-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
+/* Buttons container styles */
+/* .category-form-buttons-container {
+  margin-top: 20px;
+} */
 
-  /* Submit button styles */
-  .category-form-submit-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
+/* Submit button styles */
+.category-form-submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
-  .category-form-submit-button:hover {
-    background-color: #0056b3;
-  }
+.category-form-submit-button:hover {
+  background-color: #0056b3;
+}
 
-  /* Cancel button styles */
-  .category-form-cancel-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-  }
+/* Cancel button styles */
+.category-form-cancel-button {
+  margin: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
 
-  .category-form-cancel-button:hover {
-    background-color: #0056b3;
-  }
+.category-form-cancel-button:hover {
+  background-color: #0056b3;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-size: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  /* To maintain border radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.employee-table th {
+  background-color: #ffffff;
+  color: white;
+  font-weight: bold;
+  padding: 12px 15px;
+  border-bottom: 2px solid #3813C2;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 12px 15px;
+  text-align: left;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.employee-table tr:last-child td {
+  border-bottom: none;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup content */
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 100%;
+}
+
+/* Popup title */
+.popup-content h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Buttons inside the popup */
+.form-group-buttons {
+  text-align: right;
+}
+
+.form-group-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Submit button */
+.form-group-buttons button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.form-group-buttons button[type="submit"]:hover {
+  background-color: #007bff;
+}
+
+/* Cancel button */
+.form-group-buttons button[type="button"] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.form-group-buttons button[type="button"]:hover {
+  background-color: #007bff;
+}
+
+/* Status box styling */
+.status-box {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Green box for active status */
+.status-box.active {
+  background-color: #28a745;
+  /* Green background */
+}
+
+/* Red box for inactive status */
+.status-box.inactive {
+  background-color: #dc3545;
+  /* Red background */
+}
+
+/* General table styling */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-size: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.employee-table th {
+  background-color: #ffffff;
+  color: white;
+  font-weight: bold;
+  padding: 12px 15px;
+  border-bottom: 2px solid #3813C2;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 12px 15px;
+  text-align: left;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.employee-table tr:last-child td {
+  border-bottom: none;
+}
