@@ -73,4 +73,16 @@ export const Sidebardata = [
         icon: <FiIcons.FiUserPlus />,
         cName: "nav-text"
     },
+    {
+        title: "modfied Catagory",
+        path: "/addnewcategory",
+        icon: <FiIcons.FiCreditCard />,
+        cName: "nav-text"
+    },
+    {
+        title: "Brand Catagory",
+        path: "/addnewbrand",
+        icon: <MdIcons.MdArrowForwardIos />,
+        cName: "nav-text"
+    },
 ]

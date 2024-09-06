@@ -9,7 +9,8 @@ import Catagoury from './components/catagoury/categories.jsx';
 import Navbar from './components/menu/navbar.jsx';
 import Newuserregistration from './components/New_user_Registration/newuserregistration.jsx';
 import Newcatagory from './components/newcatagory/newcatagory.jsx';
-
+import Addcategory from './views/CategoryPage.js';
+import Mastercategory from './views/masterCategoryPage.js';
 function PrivateRoute({ children, isAuthenticated }) {
   return isAuthenticated ? children : <Navigate to="/" />;
 }
@@ -93,6 +94,22 @@ function App() {
           element={
             <PrivateRoute isAuthenticated={isAuthenticated}>
               <Newcatagory />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/addnewcategory"
+          element={
+            <PrivateRoute isAuthenticated={isAuthenticated}>
+              <Addcategory />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/addnewbrand"
+          element={
+            <PrivateRoute isAuthenticated={isAuthenticated}>
+              <Mastercategory />
             </PrivateRoute>
           }
         />
