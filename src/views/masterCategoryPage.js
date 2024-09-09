@@ -22,7 +22,7 @@ const MasterCategoryPage = () => {
     }));
 
     if (loading) return <div>Loading...</div>;
-    if (error) return <div className="error-message">{error}</div>;
+    // if (error) return <div className="error-message">{error}</div>;
 
     return (
         <div className="category-page">
@@ -33,6 +33,7 @@ const MasterCategoryPage = () => {
                 onEdit={(id) => console.log('Edit functionality not implemented for ID:', id)}
                 onDelete={handleDelete}
             />
+            {error && (<div className="error-message">{error}</div>)}
         </div>
     );
 };
