@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './login.css';
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import config from '../../config/config';
 
 const LoginScreen = ({ onLogin }) => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const LoginScreen = ({ onLogin }) => {
     console.log('Handling form submission...');
 
     try {
-      const response = await axios.post('http://192.168.1.45:8081/api/auth/userlogin', formSubmission);
+      const response = await axios.post(`${config}/api/auth/userlogin`, formSubmission);
       console.log(response.data);
 
       if (response.data.loginstatus) {
