@@ -23,7 +23,7 @@ const LoginScreen = ({ onLogin }) => {
     console.log('Handling form submission...');
 
     try {
-      const response = await axios.post(`${config.baseURL}/userlogin`, formSubmission);
+      const response = await axios.post(`${config.baseURL}userlogin`, formSubmission);
       // console.log(response.data);
 
       if (response.data.loginstatus) {
