@@ -23,13 +23,8 @@ const LoginScreen = ({ onLogin }) => {
     console.log('Handling form submission...');
 
     try {
-<<<<<<< HEAD
       const response = await axios.post(`${config.productionBaseUrl}auth/userlogin`, formSubmission);
       console.log(response.data);
-=======
-      const response = await axios.post(`${config.baseURL}userlogin`, formSubmission);
-      // console.log(response.data);
->>>>>>> 2662d58d9f38fe4276ca1a93761f82c77ac8a50e
 
       if (response.data.loginstatus) {
         // Store the token in localStorage or a cookie
